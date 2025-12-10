@@ -1,0 +1,150 @@
+{
+  "python": ["python", "django", "fastapi", "flask", "pandas", "numpy", "scikit-learn"],
+  
+  "java": ["java", "spring boot", "springboot", "spring framework"],
+  
+  "javascript": ["javascript", "js", "nodejs", "node.js", "node js"],
+  
+  "typescript": ["typescript", "ts"],
+  
+  "csharp": ["c#", "c sharp", "dotnet", ".net", "asp.net", "asp net"],
+  
+  "cpp": ["c++", "cpp"],
+  
+  "golang": ["golang", "go language", "go-lang"],
+  
+  "php": ["php", "laravel", "symfony", "codeigniter"],
+
+  "ruby": ["ruby", "rails", "ruby on rails"],
+  
+  "swift": ["swift", "swiftui"],
+
+  "kotlin": ["kotlin", "jetpack compose"],
+
+  "dart": ["dart", "flutter"],
+
+  "frontend": [
+    "frontend", "react", "reactjs", "react js", "angular", "angularjs", "vue", "vuejs",
+    "nextjs", "nuxtjs", "html", "css", "tailwind", "bootstrap", "ui development"
+  ],
+
+  "backend": [
+    "backend", "api server", "microservice", "microservices", "django", "fastapi",
+    "flask", "spring boot", "nodejs", "express"
+  ],
+
+  "database_sql": ["mysql", "postgresql", "postgres", "mssql", "sql server", "oracle"],
+
+  "database_nosql": ["mongodb", "mongo", "redis", "cassandra", "dynamodb", "couchdb", "neo4j", "firestore"],
+
+  "sql": ["sql", "database", "databases", "query", "queries", "joins", "index", "indexing"],
+
+  "api_development": [
+    "api", "apis", "rest api", "restful api", "http api", "json api", "graphql",
+    "soap api", "endpoint", "endpoints"
+  ],
+
+  "devops": [
+    "devops", "docker", "container", "containers", "dockerfile",
+    "kubernetes", "k8s", "helm", "ci/cd", "cicd", "pipeline", "pipelines",
+    "jenkins", "gitlab ci", "github actions", "ansible", "terraform",
+    "infrastructure as code", "deployment", "deployments"
+  ],
+
+  "cloud": [
+    "cloud", "aws", "azure", "gcp", "lambda", "ec2", "s3", "cloud run", "app service", "rds"
+  ],
+
+  "data_engineering": [
+    "etl", "data pipeline", "airflow", "kafka", "spark", "hadoop", "hdfs",
+    "databricks", "snowflake"
+  ],
+
+  "ai_ml": [
+    "machine learning", "ml", "deep learning", "neural network", "nn",
+    "nlp", "natural language processing", "computer vision",
+    "pytorch", "tensorflow", "keras", "model training",
+    "transformers", "llm", "gpt", "bert"
+  ],
+
+  "analytics_bi": [
+    "power bi", "tableau", "looker studio", "dashboards", "data visualization", "business intelligence"
+  ],
+
+  "security": [
+    "security", "penetration testing", "pentest", "ethical hacking",
+    "owasp", "firewall", "jwt", "vulnerability", "access control"
+  ],
+
+  "networking": [
+    "tcp/ip", "dns", "routing", "load balancer", "vpn", "proxy", "subnet"
+  ],
+
+  "mobile": [
+    "mobile app", "android app", "ios app",
+    "flutter", "react native", "swift", "swiftui", "kotlin"
+  ],
+
+  "ui_ux": [
+    "ui/ux", "ui ux", "ux design", "user experience",
+    "wireframe", "prototyping", "figma", "adobe xd"
+  ],
+
+  "project_management": [
+    "scrum", "kanban", "agile", "sprint planning",
+    "jira", "confluence", "trello", "asana"
+  ],
+
+  "version_control": ["git", "github", "gitlab", "bitbucket"],
+
+  "collaboration_tools": ["slack", "microsoft teams", "zoom", "google meet", "notion"],
+
+  "architecture": [
+    "architecture", "system design", "multi tenant", "multitenant", "multi-tenant",
+    "microservices architecture", "monolith", "serverless", "event driven"
+  ],
+
+  "communication": [
+    "meeting", "meetings", "communicated", "communication", "presentation", "discussion", "explained",
+    "shared", "updated", "coordinated", "informed", "call with"
+  ],
+
+  "leadership": [
+    "led the team", "mentored", "guided", "assigned tasks", "delegated tasks",
+    "managed team", "team lead", "tech lead"
+  ],
+
+  "generative_ai": [
+    "generative ai", "ai", "genai", "chatgpt", "llms", "large language model",
+    "gpt-4", "gpt-3.5", "claude", "llama", "mixtral",
+    "text generation", "image generation", "ai agent",
+    "prompt engineering", "rag", "retrieval augmented generation",
+    "semantic search", "vector embeddings", "embeddings"
+  ],
+
+  "llm_frameworks": [
+    "langchain", "llamaindex", "haystack", "autogen", "deeplake",
+    "milvus", "pinecone", "weaviate", "chroma", "faiss"
+  ],
+
+  "nlp_advanced": [
+    "tokenization", "named entity recognition", "ner",
+    "text summarization", "text classification", "translation",
+    "speech recognition", "asr", "tts", "text-to-speech",
+    "question answering", "sentence transformer", "semantic similarity"
+  ],
+
+  "mlops": [
+    "mlops", "model deployment", "model monitoring", "model registry",
+    "mlflow", "kubeflow", "sagemaker", "vertex ai", "azure ml",
+    "feature store", "model serving", "containerized ml",
+    "ai pipelines", "data versioning", "dvc"
+  ],
+
+  "data_science": [
+    "data science", "eda", "feature engineering",
+    "model evaluation", "supervised learning",
+    "unsupervised learning", "clustering", "regression",
+    "classification", "time series", "forecasting"
+  ]
+}
