@@ -1,28 +1,34 @@
 # db.py
-import mysql.connector
-from mysql.connector import pooling
+import os
+from psycopg2 import pool
 from pymongo import MongoClient
-from app.config import *
 
 # -----------------------------
-# MYSQL CONNECTION POOL
+# POSTGRESQL CONNECTION POOL
 # -----------------------------
-pool = pooling.MySQLConnectionPool(
-    pool_name="my_pool",
-    pool_size=5,
-    host=MYSQL_HOST,
-    user=MYSQL_USER,
-    password=MYSQL_PASSWORD,
-    database=MYSQL_NAME,
+# Read DATABASE_URL from environment (Render provides this)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Create a simple connection pool (psycopg2 pool)
+# Note: psycopg2 pool is less feature-rich than MySQL's, but works well
+pg_pool = pool.SimpleConnectionPool(
+    1,  # minconn
+    5,  # maxconn
+    DATABASE_URL
 )
 
-def get_conn():
-    return pool.get_connection()
+def get_postgres_conn():
+    return pg_pool.getconn()
+
+def put_postgres_conn(conn):
+    pg_pool.putconn(conn)
 
 
 # -----------------------------
-# MONGO CONNECTION
+# MONGO CONNECTION (Atlas)
 # -----------------------------
+MONGO_URL = os.getenv("MONGO_URL")
+
 def get_mongo_client():
     return MongoClient(MONGO_URL)
 
@@ -34,12 +40,10 @@ def get_reflection_collection():
     db = client["myreflection"]
     return db["reflections"]
 
-
 def get_timesheet_collection():
     client = get_mongo_client()
     db = client["myreflection"]
     return db["timesheets"]
-
 
 def get_ml_reports_collection():
     client = get_mongo_client()
