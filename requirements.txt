@@ -1,20 +1,9 @@
-# fastapi
-# uvicorn[standard]
-# mysql-connector-python
-# python-dotenv
-# passlib[bcrypt]
-
-
-# uvicorn app.main:app --reload --port 8009
-# python -m http.server 8809
-# http://127.0.0.1:8809/login.html
-
-
-
 fastapi
 uvicorn[standard]
 pymongo
 python-multipart
+mysql-connector-python
+python-dotenv
 pydantic
 sentence-transformers
 scikit-learn
@@ -23,37 +12,7 @@ pandas
 apscheduler
 tqdm
 
-# Optional (only install if you want BERTopic-based topics)
 bertopic
 hdbscan
 umap-learn
 yake
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# mkdir myreflection\backend\app myreflection\frontend\js myreflection\frontend\css && (
-#   echo. > myreflection\README.md
-#   echo. > myreflection\backend\requirements.txt
-#   echo. > myreflection\backend\.env
-#   echo. > myreflection\backend\app\main.py
-#   echo. > myreflection\backend\app\db.py
-#   echo. > myreflection\backend\app\auth.py
-#   echo. > myreflection\backend\app\utils.py
-#   echo. > myreflection\frontend\login.html
-#   echo. > myreflection\frontend\js\login.js
-#   echo. > myreflection\frontend\css\style.css
-)
