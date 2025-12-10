@@ -13,6 +13,8 @@ apscheduler
 psycopg2
 asyncpg
 tqdm
+psycopg2-binary
+pymongo[srv]
 
 bertopic
 hdbscan
