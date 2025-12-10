@@ -1,4 +1,4 @@
-# db.py
+# app/db.py
 import os
 from psycopg2 import pool
 from pymongo import MongoClient
@@ -6,16 +6,11 @@ from pymongo import MongoClient
 # -----------------------------
 # POSTGRESQL CONNECTION POOL
 # -----------------------------
-# Read DATABASE_URL from environment (Render provides this)
 DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL environment variable is required")
 
-# Create a simple connection pool (psycopg2 pool)
-# Note: psycopg2 pool is less feature-rich than MySQL's, but works well
-pg_pool = pool.SimpleConnectionPool(
-    1,  # minconn
-    5,  # maxconn
-    DATABASE_URL
-)
+pg_pool = pool.SimpleConnectionPool(1, 5, DATABASE_URL)
 
 def get_postgres_conn():
     return pg_pool.getconn()
@@ -23,29 +18,27 @@ def get_postgres_conn():
 def put_postgres_conn(conn):
     pg_pool.putconn(conn)
 
-
 # -----------------------------
-# MONGO CONNECTION (Atlas)
+# MONGO CONNECTION
 # -----------------------------
 MONGO_URL = os.getenv("MONGO_URL")
+if not MONGO_URL:
+    raise ValueError("MONGO_URL environment variable is required")
 
 def get_mongo_client():
     return MongoClient(MONGO_URL)
 
-# ============================================================
-# COMMON COLLECTION HELPERS
-# ============================================================
+# -----------------------------
+# COLLECTION HELPERS
+# -----------------------------
 def get_reflection_collection():
     client = get_mongo_client()
-    db = client["myreflection"]
-    return db["reflections"]
+    return client["myreflection"]["reflections"]
 
 def get_timesheet_collection():
     client = get_mongo_client()
-    db = client["myreflection"]
-    return db["timesheets"]
+    return client["myreflection"]["timesheets"]
 
 def get_ml_reports_collection():
     client = get_mongo_client()
-    db = client["myreflection"]
-    return db["ml_reports"]
+    return client["myreflection"]["ml_reports"]
