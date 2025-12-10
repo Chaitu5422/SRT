@@ -10,6 +10,8 @@ scikit-learn
 nltk
 pandas
 apscheduler
+psycopg2
+asyncpg
 tqdm
 
 bertopic
