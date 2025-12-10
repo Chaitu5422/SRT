@@ -2,7 +2,6 @@ fastapi
 uvicorn[standard]
 pymongo
 python-multipart
-mysql-connector-python
 python-dotenv
 pydantic
 sentence-transformers
